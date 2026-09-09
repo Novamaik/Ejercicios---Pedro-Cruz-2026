@@ -1,0 +1,45 @@
+#include <stdio.h>
+
+void comparar(int vector1[], int vector2[], int tamaño) {
+    int i;
+
+    for(i = 0; i < tamaño; i++) {
+
+        if(vector1[i] > vector2[i]) {
+            printf("Posicion %d: Vector 1 tiene el mayor valor (%d)\n",
+                   i, vector1[i]);
+        }
+        else if(vector2[i] > vector1[i]) {
+            printf("Posicion %d: Vector 2 tiene el mayor valor (%d)\n",
+                   i, vector2[i]);
+        }
+        else {
+            printf("Posicion %d: Los valores son iguales (%d)\n",
+                   i, vector1[i]);
+        }
+    }
+}
+
+int main() {
+    int vector1[5];
+    int vector2[5];
+    int i;
+
+    printf("Ingrese los valores del Vector 1:\n");
+
+    for(i = 0; i < 5; i++) {
+        scanf("%d", &vector1[i]);
+    }
+
+    printf("\nIngrese los valores del Vector 2:\n");
+
+    for(i = 0; i < 5; i++) {
+        scanf("%d", &vector2[i]);
+    }
+
+    printf("\nComparacion:\n");
+
+    comparar(vector1, vector2, 5);
+
+    return 0;
+}
