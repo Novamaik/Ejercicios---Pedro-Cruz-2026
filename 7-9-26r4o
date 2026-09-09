@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    int vector[5];
+    int i;
+    int suma = 0;
+    float promedio;
+
+    printf("Ingrese 5 valores:\n");
+
+    for(i = 0; i < 5; i++) {
+        scanf("%d", &vector[i]);
+    }
+
+    for(i = 0; i < 5; i++) {
+        suma = suma + vector[i];
+    }
+
+    promedio = (float)suma / 5;
+
+    printf("\nLa suma de los valores es: %d\n", suma);
+    printf("El promedio es: %.2f\n", promedio);
+
+    return 0;
+}
