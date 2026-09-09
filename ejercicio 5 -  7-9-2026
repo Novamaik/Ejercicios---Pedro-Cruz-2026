@@ -1,0 +1,53 @@
+#include <stdio.h>
+
+void ordenar(int vector[], int tamaño) {
+    int i, j, aux;
+
+    for(i = 0; i < tamaño - 1; i++) {
+        for(j = i + 1; j < tamaño; j++) {
+
+            if(vector[i] < vector[j]) {
+                aux = vector[i];
+                vector[i] = vector[j];
+                vector[j] = aux;
+            }
+        }
+    }
+}
+
+float promedio(int vector[], int tamaño) {
+    int i;
+    int suma = 0;
+
+    for(i = 0; i < tamaño; i++) {
+        suma = suma + vector[i];
+    }
+
+    return (float)suma / tamaño;
+}
+
+int main() {
+    int vector[10];
+    int i;
+    float prom;
+
+    printf("Ingrese 10 valores:\n");
+
+    for(i = 0; i < 10; i++) {
+        scanf("%d", &vector[i]);
+    }
+
+    ordenar(vector, 10);
+
+    printf("\nVector ordenado de mayor a menor:\n");
+
+    for(i = 0; i < 10; i++) {
+        printf("%d ", vector[i]);
+    }
+
+    prom = promedio(vector, 10);
+
+    printf("\n\nEl promedio es: %.2f\n", prom);
+
+    return 0;
+}
