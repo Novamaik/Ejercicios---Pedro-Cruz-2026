@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+struct Alumno {
+    char nombre[30];
+    int edad;
+    int anio;
+};
+
+int main() {
+    struct Alumno alumno = {"Pedro", 16, 5};
+
+    printf("Nombre: %s\n", alumno.nombre);
+    printf("Edad: %d\n", alumno.edad);
+    printf("Año: %d\n", alumno.anio);
+
+    return 0;
+}
