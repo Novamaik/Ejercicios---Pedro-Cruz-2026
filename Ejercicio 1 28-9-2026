@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main()
+{
+  int vector [3][2];
+  int i,j;
+  for(i=0;i<3;i++){
+      for(j=0;j<2;j++){
+          printf("\nIngrese el valor de la posición [%d][%d]:" ,i,j);
+          scanf("%d",&vector[i][j]);
+          
+         
+            
+        }
+    }      
+  
+    return 0;
+}
